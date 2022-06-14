@@ -1,5 +1,3 @@
-# React Encrypt Decrypt Data
-
 ## Installation
 
 ```
