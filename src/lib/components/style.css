@@ -1,0 +1,58 @@
+.button{
+border: 1px solid transparent;
+border-radius: 0.25rem;
+color: #212529;
+cursor: pointer;
+display: inline-block;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+padding: 0.375rem 0.75rem;
+text-align: center;
+text-decoration: none;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+-webkit-user-select: none;
+-ms-user-select: none;
+user-select: none;
+vertical-align: middle;
+}
+
+.ripple-button {
+    border-radius: 4px;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .ripple-button > .ripple {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    display: block;
+    content: "";
+    border-radius: 9999px;
+    opacity: 1;
+    animation: 0.9s ease 1 forwards ripple-effect;
+  }
+  
+  @keyframes ripple-effect {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(10);
+      opacity: 0.375;
+    }
+    100% {
+      transform: scale(35);
+      opacity: 0;
+    }
+  }
+  
+  .ripple-button > .content {
+    position: relative;
+    z-index: 2;
+  }
